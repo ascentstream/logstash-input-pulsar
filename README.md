@@ -70,6 +70,28 @@ input{
 }
 ```
 
+# Build
+1. Download and build logstash code.
+``` 
+git clone --branch v8.*.*  --single-branch  https://github.com/elastic/logstash.git
+cd logstash
+./gradlew assemble
+``` 
+See [build.gradle](build.gradle) for specific versions.
+
+2. create gradle.properties on  path logstash-input-pulsar.
+``` 
+LOGSTASH_CORE_PATH=<target_folder>/logstash-core
+``` 
+3. build.
+``` 
+./gradlew gem
+// output
+  Successfully built RubyGem
+  Name: logstash-input-pulsar
+  Version: 2.10.6
+  File: logstash-input-pulsar-2.10.6.gem
+``` 
 
 # Installation
 
@@ -79,5 +101,5 @@ https://github.com/streamnative/logstash-input-pulsar/releases
 2. Install this plugin using logstash preoffline command.
 
 ```
-bin/logstash-plugin install file://{PATH_TO}/logstash-input-pulsar-2.7.1.zip
+bin/logstash-plugin install file://{PATH_TO}/logstash-input-pulsar-2.10.6.zip
 ```
