@@ -89,17 +89,17 @@ LOGSTASH_CORE_PATH=<target_folder>/logstash-core
 // output
   Successfully built RubyGem
   Name: logstash-input-pulsar
-  Version: 2.10.6
-  File: logstash-input-pulsar-2.10.6.gem
+  Version: 2.10.6.1
+  File: logstash-input-pulsar-2.10.6.1.gem
 ``` 
 
 # Installation
 
-1. Get the latest zip file from release page.
-https://github.com/streamnative/logstash-input-pulsar/releases
+1. Get the latest gem file from release page.
+https://github.com/ascentstream/logstash-input-pulsar/releases
 
 2. Install this plugin using logstash preoffline command.
 
 ```
-bin/logstash-plugin install file://{PATH_TO}/logstash-input-pulsar-2.10.6.zip
+bin/logstash-plugin install file://{PATH_TO}/logstash-input-pulsar-2.10.6.1.gem
 ```
