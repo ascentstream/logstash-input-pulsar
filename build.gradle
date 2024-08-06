@@ -26,12 +26,17 @@ targetCompatibility = 1.8
 
 buildscript {
     repositories {
-        mavenCentral()
-        jcenter()
+        maven {
+            url = uri("https://plugins.gradle.org/m2/")
+        }
+    }
+
+    ext {
+        snakeYamlVersion = '2.0'
     }
 
     dependencies {
-        classpath 'com.github.jengelman.gradle.plugins:shadow:4.0.4'
+        classpath("com.github.johnrengelman:shadow:8.1.1")
     }
 }
 
@@ -52,7 +57,7 @@ dependencies {
     implementation 'org.apache.logging.log4j:log4j-api:2.17.2'
     implementation 'org.apache.pulsar:pulsar-client:2.10.2'
     implementation 'com.google.code.gson:gson:2.9.0'
-    implementation files(LOGSTASH_CORE_PATH + '/../logstash-core/build/libs/logstash-core-7.17.4.jar')
+    implementation files(LOGSTASH_CORE_PATH + '/../logstash-core/build/libs/logstash-core-8.12.3.jar')
 
     testImplementation 'junit:junit:4.12'
     testImplementation 'org.jruby:jruby-complete:9.1.14.0'
